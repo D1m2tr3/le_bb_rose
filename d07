@@ -42,3 +42,43 @@ int     ft_ultimate_range(int **range, int min,  int max)
     *range = ft_range(min, max);
     return (min >= max ? 0 : max - min);
 }
+
+int     ft_strlen(char *str)
+{
+    int len;
+    
+    len = 0;
+    while (str[len])
+        len++;
+    return (len);
+}
+
+char *ft_concat_params(int argc, char **argv)
+{
+    char *dest;
+    int len;
+    int j;
+    int i;
+    
+    len = 0;
+    j = 1;
+    while(j < argc)
+        len += ft_strlen(argv[j++]);
+    if (!(dest = malloc(sizeof(char*) * (len + 1))))
+        return(NULL);
+    len = 0;
+    j = 1;
+    while(j < argc)
+    {
+        i = 0;
+        while (argv[j][i])
+        {
+            dest[len] = argv[j][i];
+            len++;
+            i++;
+        }
+        dest[len++] = '\n';
+        j++;
+    }
+    return (dest);
+}

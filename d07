@@ -169,3 +169,49 @@ void    ft_print_words_tables(char **tab) // à tester
         j++;
     }
 }
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int check_base(char *base, char *nbr)
+{
+    int i;
+    int j;
+    
+    i = 0
+    while (base[i] && base[i + 1])
+    {
+        j = i + 1
+        while (base[j])
+        {
+            if (base[i] == base[j])
+                return (0);
+            j++;
+        }
+        i++;
+    }
+    return (i + 1);
+}
+
+int check_nbr(char *nbr, char *base)
+{
+    int i;
+    int j;
+    
+    i = 0;
+    while (nbr[i])
+    {
+        j = 0;
+        while (base[j])
+        {
+            
+        }
+    }
+}
+
+char *ft_convert_base(char *nbr, char *base_from, char *base_to)
+{
+    if (check_base(base_from) || check_base(base_to) || check_nbr(nbr, base_from))
+        return (NULL);
+    
+}

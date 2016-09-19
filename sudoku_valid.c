@@ -1,5 +1,5 @@
-#define	Y(x) ((x) / 3 + (b / 3) * 3) + 1
-#define X(x) (x) % 3 + (b % 3) * 3
+#define	YB(x) ((x) / 3 + (b / 3) * 3) + 1
+#define XB(x) (x) % 3 + (b % 3) * 3
 #define ISNUM(x) (x) >= '0' && (x) <= '9'
 #define ALLOWED(x) (x) == '.' || ISNUM(x)
 
@@ -60,8 +60,8 @@ int	valid_block(char **tab, int b)
 		j = i + 1
 		while (j < 9)
 		{
-			if (tab[Y(i)][X(i)]] == tab[Y(j)][X(j)] && ISNUM(tab[Y(i)][X(i)]])
-				&& ISNUM(tab[Y(j)][X(j)))
+			if (tab[YB(i)][XB(i)]] == tab[YB(j)][XB(j)] && ISNUM(tab[YB(i)][XB(i)]])
+				&& ISNUM(tab[YB(j)][XB(j)))
 				return (1);
 			j++;
 		}

@@ -3,7 +3,6 @@
 #define ISNUM(x) (x) >= '0' && (x) <= '9'
 #define ALLOWED(x) (x) == '.' || ISNUM(x)
 
-
 int valid_line(char **tab, int l)
 {
 	int i;
@@ -26,7 +25,7 @@ int valid_line(char **tab, int l)
 			return (1);
 		i++;
 	}
-	return(l == 9 ? 0 : valid_line(tab, l + 1));
+	return (0);
 }
 
 int	valid_column(char **tab, int c)
